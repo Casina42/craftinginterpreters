@@ -16,7 +16,7 @@ void compile(const char* source);
 bool compile(const char* source, Chunk* chunk);
 */
 //> Calls and Functions compile-h
-ObjFunction* compile(const char* source);
+ObjFunction *compile(const char *source);
 //< Calls and Functions compile-h
 //> Garbage Collection mark-compiler-roots-h
 void markCompilerRoots();
