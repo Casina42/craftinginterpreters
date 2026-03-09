@@ -19,3 +19,6 @@ xcuserdata/
 
 
 c/.vscode/
+c/obj/
+c/build/
+c/vc140.pdb

@@ -29,8 +29,7 @@ void freeTable(Table *table)
 // NOTE: The "Optimization" chapter has a manual copy of this function.
 // If you change it here, make sure to update that copy.
 //< omit
-static Entry *findEntry(Entry *entries, int capacity,
-				ObjString *key)
+static Entry *findEntry(Entry *entries, int capacity, ObjString *key)
 {
 	/* Hash Tables find-entry < Optimization initial-index
 	  uint32_t index = key->hash % capacity;
@@ -188,8 +187,7 @@ void tableAddAll(Table *from, Table *to)
 }
 //< table-add-all
 //> table-find-string
-ObjString *tableFindString(Table *table, const char *chars,
-				   int length, uint32_t hash)
+ObjString *tableFindString(Table *table, const char *chars, int length, uint32_t hash)
 {
 	if (table->count == 0)
 		return NULL;

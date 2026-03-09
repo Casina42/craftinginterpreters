@@ -135,8 +135,7 @@ static void skipWhitespace()
 }
 //< skip-whitespace
 //> check-keyword
-static TokenType checkKeyword(int start, int length,
-					const char *rest, TokenType type)
+static TokenType checkKeyword(int start, int length, const char *rest, TokenType type)
 {
 	if (scanner.current - scanner.start == start + length &&
 	    memcmp(scanner.start + start, rest, length) == 0)
@@ -304,17 +303,13 @@ Token scanToken()
 		return makeToken(TOKEN_STAR);
 		//> two-char
 	case '!':
-		return makeToken(
-		    match('=') ? TOKEN_BANG_EQUAL : TOKEN_BANG);
+		return makeToken(match('=') ? TOKEN_BANG_EQUAL : TOKEN_BANG);
 	case '=':
-		return makeToken(
-		    match('=') ? TOKEN_EQUAL_EQUAL : TOKEN_EQUAL);
+		return makeToken(match('=') ? TOKEN_EQUAL_EQUAL : TOKEN_EQUAL);
 	case '<':
-		return makeToken(
-		    match('=') ? TOKEN_LESS_EQUAL : TOKEN_LESS);
+		return makeToken(match('=') ? TOKEN_LESS_EQUAL : TOKEN_LESS);
 	case '>':
-		return makeToken(
-		    match('=') ? TOKEN_GREATER_EQUAL : TOKEN_GREATER);
+		return makeToken(match('=') ? TOKEN_GREATER_EQUAL : TOKEN_GREATER);
 		//< two-char
 		//> scan-string
 	case '"':
